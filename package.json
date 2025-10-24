@@ -1,18 +1,19 @@
 {
-  "name": "anytex",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest",
-    "web-ext": "^9.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "html2canvas": "^1.4.1",
-    "katex": "^0.16.25",
-    "webextension-polyfill": "^0.12.0"
-  }
+    "name": "anytex",
+    "module": "index.ts",
+    "type": "module",
+    "private": true,
+    "version": "1.0.0",
+    "devDependencies": {
+        "@types/bun": "latest",
+        "web-ext": "^9.0.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "html2canvas": "^1.4.1",
+        "mathjax-full": "^3.2.2",
+        "webextension-polyfill": "^0.12.0"
+    }
 }
