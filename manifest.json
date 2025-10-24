@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "anyTeX",
+    "version": "1.0.0",
+    "description": "Get LaTeX image quickly, anywhere.",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "contextMenus",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}

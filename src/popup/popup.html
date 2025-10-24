@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <h3>anyTeX - LaTeX Anywhere</h3>
+    <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
+        <textarea id="latex-input" rows="3" placeholder="Enter LaTeX..."></textarea>
+        <button id="render-btn">Render</button>
+
+        <label style="display:flex; align-items:center; gap:8px;">
+            Scale: <span id="scale-value">5.0</span>
+            <input type="range" id="scale-slider" min="5" max="25" step="0.1" value="1" />
+        </label>
+
+        <div id="preview" style="background:transparent; margin-top:10px;"></div>
+        <button id="copy-btn">Copy Image</button>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>
