@@ -4,6 +4,8 @@ import { SVG } from "mathjax-full/js/output/svg.js";
 import { liteAdaptor } from "mathjax-full/js/adaptors/liteAdaptor.js";
 import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
 import html2canvas from "html2canvas";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const input = document.getElementById("latex-input");
 const btn = document.getElementById("render-btn");

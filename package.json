@@ -12,6 +12,7 @@
         "typescript": "^5"
     },
     "dependencies": {
+        "bootstrap": "^5.3.8",
         "html2canvas": "^1.4.1",
         "mathjax-full": "^3.2.2",
         "webextension-polyfill": "^0.12.0"

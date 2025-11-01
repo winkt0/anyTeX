@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>anyTeX - LaTeX Anywhere</title>
     <link rel="stylesheet" href="popup.css" />
 </head>
 
-<body>
-    <h3>anyTeX - LaTeX Anywhere</h3>
-    <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
-        <textarea id="latex-input" rows="3" placeholder="Enter LaTeX..."></textarea>
-        <button id="render-btn">Render</button>
-
-        <label style="display:flex; align-items:center; gap:8px;">
-            Scale: <span id="scale-value">5.0</span>
-            <input type="range" id="scale-slider" min="5" max="25" step="0.1" value="1" />
-        </label>
-
-        <div id="preview" style="background:transparent; margin-top:10px;"></div>
-        <button id="copy-btn">Copy Image</button>
+<body class="bg-light p-3">
+    <div class="mb-3">
+        <label for="latex-input" class="form-label fw-medium">LaTeX Input</label>
+        <textarea id="latex-input" class="form-control" rows="3" placeholder="Enter LaTeX..."></textarea>
     </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <button id="render-btn" class="btn btn-primary">Render</button>
+    </div>
+
+    <div class="d-flex align-items-center gap-2">
+        <label for="scale-slider" class="form-label mb-0">Scale:</label>
+        <span id="scale-value" class="fw-semibold">5.0</span>
+        <input type="range" id="scale-slider" class="form-range" min="5" max="25" step="0.1" value="1" />
+    </div>
+    <div id="preview" class="border rounded bg-white p-2 mb-3 text-center" style="min-height: 100px;">
+        <!-- Preview content dynamically inserted -->
+    </div>
+
+    <button id="copy-btn" class="btn btn-outline-secondary w-100">
+        Copy Image
+    </button>
 
     <script type="module" src="popup.js"></script>
 </body>
