@@ -9,8 +9,10 @@ textarea {
     height: 80px;
 }
 
-#preview {
+#preview-container {
     margin-top: 10px;
     min-height: 30px;
     padding-top: 5px;
+    background: #FFFFFF;
+    background-color: #FFFFFF;
 }

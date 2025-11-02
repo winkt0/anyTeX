@@ -13,6 +13,7 @@ const preview = document.getElementById("preview");
 const scaleSlider = document.getElementById("scale-slider");
 const scaleValue = document.getElementById("scale-value");
 const copyBtn = document.getElementById("copy-btn");
+const downloadBtn = document.getElementById("download-btn");
 
 var lastLatexInput = null;
 let currentScale = parseFloat(scaleSlider.value);
@@ -56,13 +57,18 @@ btn.addEventListener("click", () => {
     }
 });
 
+function createCanvas(container, scale) {
+    return html2canvas(container, {
+        backgroundColor: null,
+        scale: scale,
+        removeContainer: true,
+        useCORS: true
+    });
+}
+
 // Copy image to clipboard
 copyBtn.addEventListener("click", async () => {
-    const canvas = await html2canvas(preview, {
-        backgroundColor: null,
-        scale: currentScale,
-    });
-
+    const canvas = await createCanvas(preview, currentScale);
     const dataURL = canvas.toDataURL("image/png");
     const response = await fetch(dataURL);
     const blob = await response.blob();
@@ -71,5 +77,16 @@ copyBtn.addEventListener("click", async () => {
     ]);
     copyBtn.textContent = "Copied!";
     setTimeout(() => (copyBtn.textContent = "Copy Image"), 1500);
+});
+
+downloadBtn.addEventListener("click", async () => {
+    const canvas = await createCanvas(preview, currentScale);
+    const dataURL = canvas.toDataURL("image/png");
+    const link = document.createElement('a')
+    link.href = dataURL
+    link.download = 'tex-image.png'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
 });
 
