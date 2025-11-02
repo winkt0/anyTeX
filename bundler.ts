@@ -8,6 +8,7 @@ await Bun.build({
     entrypoints: entrypoints,
     outdir: outdir,
     minify: false,
+    target: "bun"
 });
 
 const file = Bun.file('manifest.json');
