@@ -60,7 +60,7 @@ If you're frustrated with not being able to use TeX or LaTeX in Emails and chats
 ### Built With
 |Tool   |Purpose   |
 |---|---|
-|[![Bun][bun-icon]][Bun-url]                 |Project setup, as bundler and package manager   |
+|[![Bun][bun-icon]][Bun-url]                 |Project setup, bundler and package manager   |
 |[![Bootstrap][Bootstrap.com]][Bootstrap-url]|CSS   |
 |[![MathJax][Mathjax-icon]][Mathjax-url]     |Converting TeX and LaTeX input into actual rendered SVGs   |
 |[[Html2Canvas]][html2canvas-url]            |Creating an image of the generated SVG so you can download or paste it wherever you want!   |
