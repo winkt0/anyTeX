@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "anyTeX",
     "version": "1.0.0",
-    "description": "Get LaTeX image quickly, anywhere.",
+    "description": "Write, Render and Screenshot TeX quickly in a popup.",
     "permissions": [
         "scripting",
         "activeTab",
@@ -14,5 +14,8 @@
     },
     "host_permissions": [
         "<all_urls>"
-    ]
+    ],
+    "icons": {
+        "128": "images/icon.png"
+    }
 }

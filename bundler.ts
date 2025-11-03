@@ -11,5 +11,9 @@ await Bun.build({
     target: "bun"
 });
 
-const file = Bun.file('manifest.json');
-await Bun.write(outdir + '/manifest.json', file);
+async function copyToDist(filename: string) {
+    const file = Bun.file(filename);
+    await Bun.write(outdir + '/' + filename, file);
+}
+copyToDist('manifest.json');
+copyToDist('images/icon.png');
