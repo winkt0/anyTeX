@@ -88,8 +88,9 @@ You only need bun and a Chromium-based browser. If you're on Mac or Linux, run t
    git clone https://github.com/winkt0/anyTeX.git
    cd anyTeX
    ```
-2. Create the folder 'dist' by running
+2. Install all dependencies & reate the folder 'dist' by running
    ```sh
+   bun install
    bun run build
    ```
 4. In your browser, go into extensions, click "Load unpacked" and select the dist folder you just created
